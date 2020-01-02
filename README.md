@@ -14,7 +14,11 @@
 
 [bootstrap](https://v3.bootcss.com)
 
-[Github OAuth](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)
+[Github OAuth Developer](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)
+
+[H2 QiuckStart](https://www.h2database.com/html/quickstart.html)
+
+[MyBatis](http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
 
 
 ## 工具

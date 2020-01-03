@@ -20,6 +20,7 @@
 
 [MyBatis](http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
 
+[lombok 自动set get方法](https://projectlombok.org/features/all)
 
 ## 工具
 [Git](https://git-scm.com/)

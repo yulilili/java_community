@@ -1,9 +1,10 @@
-package life.majiang.community.model;
+package life.majiang.community.dto;
 
+import life.majiang.community.model.User;
 import lombok.Data;
 
 @Data
-public class Question {
+public class QuestionDTO {
     private Integer id;
     private Integer creator;
     private String title;
@@ -14,4 +15,5 @@ public class Question {
     private int viewAccount;
     private int commentAccount;
     private String tag;
+    private User user;
 }

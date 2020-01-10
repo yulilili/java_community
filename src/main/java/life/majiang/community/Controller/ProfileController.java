@@ -1,6 +1,5 @@
 package life.majiang.community.Controller;
 
-import life.majiang.community.Mapper.UserMapper;
 import life.majiang.community.dto.PaginationDTO;
 import life.majiang.community.model.User;
 import life.majiang.community.service.QuestionService;
@@ -11,14 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class ProfileController {
-    @Autowired
-    private UserMapper userMapper;
-
     @Autowired
     private QuestionService questionService;
 
@@ -28,21 +23,7 @@ public class ProfileController {
                           HttpServletRequest request,
                           @RequestParam(name = "page",defaultValue = "1") Integer page,
                           @RequestParam(name = "size",defaultValue = "2") Integer size){
-
-        Cookie[] cookies = request.getCookies();
-        User user=new User();
-        if (cookies!=null){
-            for (Cookie cookie:cookies){
-                if (cookie.getName().equals("token")){
-                    String token = cookie.getValue();
-                    user=userMapper.FindByToken(token);
-                    if (user!=null){
-                        request.getSession().setAttribute("user",user);
-                    }
-                    break;
-                }
-            }
-        }
+        User user= (User) request.getSession().getAttribute("user");
         if (user==null){
             return "redirect:/";
         }

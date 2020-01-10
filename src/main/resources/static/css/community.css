@@ -1,7 +1,8 @@
 body{
-    background-color:#edf3ee;
+    background-color:#efefef;
 }
 .main{
+    background-color: white;
     margin: 30px;
 }
 .btn-publish{
@@ -18,4 +19,8 @@ body{
     font-size: 12px;
     font-weight: normal;
     color: #999999;
+}
+
+.profile .section{
+    margin-top: 15px;
 }

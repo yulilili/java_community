@@ -17,14 +17,8 @@ public class PaginationDTO {
     private Integer totalPage;
 
 
-    public void setPagination(Integer totalCount, Integer size, Integer page) {
-        if (totalCount%size==0){
-            totalPage=totalCount/size;
-        }
-        else{
-            totalPage=totalCount/size+1;
-        }
-
+    public void setPagination(Integer totalPage,  Integer page) {
+        this.totalPage=totalPage;
         this.page=page;
 //      是否显示跳转第一页
         //      显示的可跳转的页数
